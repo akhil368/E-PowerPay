@@ -1,0 +1,53 @@
+package com.masai.SB_101_Project.dao;
+
+import java.util.List;
+
+import com.masai.SB_101_Project.exceptions.NoRecordFound;
+import com.masai.SB_101_Project.exceptions.SomethingWentWrongException;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceException;
+import jakarta.persistence.Query;
+
+public class CustomerSideFunctionsImpl implements CustomerSideFunctions {
+
+	@Override
+	public void payBill() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void viewAllTransactionHistory() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Object[]> getCustomerList() throws SomethingWentWrongException, NoRecordFound {
+		// TODO Auto-generated method stub
+		EntityManager em=null;
+		List<Object[]> custmerList=null;
+		try {
+			em=EmUtils.getEntityManager();
+			
+			Query query=em.createQuery("SELECT c.firstName,c.lastName,c.userName,c.address,c.number,c.email,c.isDeletd from Customer c");
+			custmerList=query.getResultList();
+			if(custmerList.size()==0)
+			{
+				throw new NoRecordFound("No Customer Found");
+			}
+		
+		
+		}catch(PersistenceException ex)
+		{
+			throw new SomethingWentWrongException("Unable to process request, try again later")
+		}
+		finally {
+			em.close();
+		}
+		
+		return custmerList;
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.masai.SB_101_Project.entity;
+
+import java.time.LocalDate;
+
+public class Transaction {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int TransactionId;
+
+	private double amountPaid;
+	private LocalDate paymentDate;
+	private String paymentMethod;
+	
+	@ManyToOne
+    @JoinColumn(name = "consumer_id")
+	private ConsumerSave consumer;
+}
