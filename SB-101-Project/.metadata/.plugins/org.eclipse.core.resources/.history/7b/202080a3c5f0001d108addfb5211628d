@@ -1,0 +1,59 @@
+package com.masai.SB_101_Project.ui;
+
+import java.time.LocalDate;
+import java.util.List;
+import java.util.Scanner;
+
+import com.masai.SB_101_Project.dao.CustomerSideFunctions;
+import com.masai.SB_101_Project.dao.CustomerSideFunctionsImpl;
+import com.masai.SB_101_Project.entity.Bill;
+import com.masai.SB_101_Project.exceptions.NoRecordFound;
+import com.masai.SB_101_Project.exceptions.SomethingWentWrongException;
+
+public class AdminUI {
+
+//	static void viewAllCustomer()
+//	{
+//		try {
+//		CustomerSideFunctions cus=new CustomerSideFunctionsImpl();
+////		List<Object[] > customerList=cus.getCustomerList();
+//		for(Object obj[] :customerList)
+//		{
+//			System.out.println("First Name "+ obj[0] + "Last Name "+ obj[1]+" User Name "+ obj[2]+ 
+//					"Address "+ obj[3] +" Email "+ obj[4]+ "Number "+ obj[5]+ "Is Deleted "+ 
+//					(((Integer)obj[6]).intValue() ==0?"No ":"Yes")
+//					);
+//		}
+//		}catch(SomethingWentWrongException | NoRecordFound ex)
+//		{
+//			System.out.println(ex.getMessage());
+//		}
+//	}
+	static void genrateBill(Scanner sc)
+	{
+		System.out.println("Enter Customer ID");
+		int id=sc.nextInt();
+		int unitRate=sc.nextInt();
+		 double prevReading=sc.nextDouble(); 
+		 double currReading=sc.nextDouble();
+		 double tax=sc.nextDouble();
+		 
+		int isPaid=sc.nextInt();
+		
+		LocalDate startDate=LocalDate.parse(sc.next());
+		LocalDate endDate=LocalDate.parse(sc.next());
+		LocalDate billing_date=LocalDate.parse(sc.next());
+		LocalDate dueDate=billing_date.plusDays(10);
+		double unitCosumed=prevReading-currReading;
+		double totalAmount=unitCosumed*unitRate;
+		
+		totalAmount=(totalAmount*2.5)/100 + totalAmount;
+		
+		Bill b=new Bill(unitRate, totalAmount, prevReading, currReading, tax, dueDate, isPaid, startDate, endDate, billing_date) 
+		
+		
+		
+		
+		
+	}
+}
