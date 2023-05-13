@@ -43,9 +43,22 @@ public class Customer {
 	@OneToMany(mappedBy = "consumer")
 	private List<Bill> billList;
 	
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", userName=" + userName
+				+ ", password=" + password + ", address=" + address + ", number=" + number + ", email=" + email
+				+ ", isDeleted=" + isDeleted + ", billList=" + billList + ", transactionList=" + transactionList + "]";
+	}
+
+	@OneToMany(mappedBy = "consumer")
+	private List<Transaction> transactionList;
 	
 	
-	
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public Customer(String firstName, String lastName, String userName, String password, String address, int number,
 			String email, List<Bill> billList, List<Transaction> transactionList) {
 		super();
@@ -141,7 +154,6 @@ public class Customer {
 		this.isDeleted = isDeleted;
 	}
 
-	@OneToMany(mappedBy = "consumer")
-	private List<Transaction> transactionList;
+	
 	
 }

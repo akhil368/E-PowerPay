@@ -1,0 +1,14 @@
+package com.masai.SB_101_Project.dao;
+
+import com.masai.SB_101_Project.entity.Bill;
+
+public interface AdminSideFunctions {
+
+	public void generateBill(Bill b,int id);
+	public void viewAllCustomer();
+	public void viewBill();
+	public void viewAllBill();
+	public void viewAllPaidAndPendingBill();
+	public void deleteCustomer();
+	
+}

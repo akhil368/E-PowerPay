@@ -10,12 +10,13 @@ public class EmUtils {
 
 	static EntityManagerFactory emf;
 	
-	static {
+	 static {
 		emf=Persistence.createEntityManagerFactory("SB101_project");
 	}
-	static EntityManager getEntityManager()
+	 public static EntityManager getEntityManager()
 	{
 		return emf.createEntityManager();
 	}
+	
 	
 }
