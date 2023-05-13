@@ -1,0 +1,26 @@
+package com.masai.SB_101_Project.ui;
+
+import java.util.Scanner;
+
+import com.masai.SB_101_Project.dao.CustomerSideFunctions;
+import com.masai.SB_101_Project.dao.CustomerSideFunctionsImpl;
+import com.masai.SB_101_Project.exceptions.NoRecordFound;
+import com.masai.SB_101_Project.exceptions.SomethingWentWrongException;
+
+public class CustomerLoginUi {
+Scanner sc=new Scanner(System.in);
+	
+	static void userLogin(Scanner sc) {
+		System.out.print("Enter username ");
+		String username = sc.next();
+		System.out.print("Enter password ");
+		String password = sc.next();
+//		try {
+//			CustomerSideFunctions customerService = new CustomerSideFunctionsImpl();
+//			customerService.login(username, password);
+////			userMenu(sc);
+//		}catch(NoRecordFound | SomethingWentWrongException ex) {
+//			System.out.println(ex.getMessage());
+//		}
+	}
+}
