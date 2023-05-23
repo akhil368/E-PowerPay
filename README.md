@@ -6,9 +6,7 @@
 #### There are total Two Sides of E-Power Pay
 - Admin
 - User 
-
-
-[237133411-a8eba950-b3c4-456e-96db-b2fbd3421c64]
+(https://github.com/akhil368/boundless-sleep-6032/assets/77136397/dbc0f1ae-92fb-40ed-af74-cba3769c4ce4)
  ### Features Of Admin ::
 - Login
 - Generate Bill
