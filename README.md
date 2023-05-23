@@ -8,7 +8,7 @@
 - User 
 
 
-[237133411-a8eba950-b3c4-456e-96db-b2fbd3421c64](https://github.com/akhil368/boundless-sleep-6032/assets/77136397/4150fd1d-bfe0-4642-8c3a-46ac3a7d6b91)
+[237133411-a8eba950-b3c4-456e-96db-b2fbd3421c64]
  ### Features Of Admin ::
 - Login
 - Generate Bill
