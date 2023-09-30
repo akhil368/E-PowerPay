@@ -1,5 +1,0 @@
-package com.masai.SB_101_Project.exceptions;
-
-public class SomethingWentWrongException extends Exception {
-
-}
