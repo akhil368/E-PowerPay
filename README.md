@@ -7,7 +7,6 @@
 - Admin
 - User 
 
-![237133411-a8eba950-b3c4-456e-96db-b2fbd3421c64]
  ### Features Of Admin ::
 - Login
 - Generate Bill
